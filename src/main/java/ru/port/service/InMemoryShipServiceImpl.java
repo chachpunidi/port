@@ -29,4 +29,11 @@ public class InMemoryShipServiceImpl implements ShipService{
         }
         return null;
     }
+
+    @Override
+    public List<ShipDto> getShips() {
+        return ships;
+    }
+
+
 }

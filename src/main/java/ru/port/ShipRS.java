@@ -10,6 +10,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 @Path("/ships/")     // аннотация из jax-rs привязывает все методы класса к адерсу {address-to-services}/aircrafts
 @Produces(MediaType.APPLICATION_JSON) // аннотация из jax-rs говорит во что преобразововать отдаваемые java объекты.
@@ -24,4 +25,8 @@ public class ShipRS {
        return shipService.getShipByCode(shipCode);
     }
 
+    @GET
+    public List<ShipDto> getShips() {
+        return shipService.getShips();
+    }
 }
