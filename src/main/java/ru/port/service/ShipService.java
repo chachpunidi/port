@@ -6,7 +6,12 @@ import java.util.List;
 
 public interface ShipService {
 
-    ShipDto getShipByCode(String shipCode);
+    List<ShipDto>  getShipByCode(String shipCode);
 
     List<ShipDto> getShips();
+
+   void addShip(ShipDto shipDto);
+
+   boolean deleteShip(String shipCode);
+
 }
