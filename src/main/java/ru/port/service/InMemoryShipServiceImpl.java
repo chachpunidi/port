@@ -1,14 +1,11 @@
 package ru.port.service;
 
 import com.github.javafaker.Faker;
-import com.github.javafaker.service.FakeValuesService;
-import com.github.javafaker.service.RandomService;
 import ru.port.model.ShipDto;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 
 public class InMemoryShipServiceImpl implements ShipService {
     List<ShipDto> ships;

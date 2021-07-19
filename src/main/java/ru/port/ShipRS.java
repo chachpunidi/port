@@ -1,6 +1,7 @@
 package ru.port;
 
 import ru.port.model.ShipDto;
+import ru.port.service.BaseShipServiceImpl;
 import ru.port.service.InMemoryShipServiceImpl;
 import ru.port.service.ShipService;
 
@@ -16,7 +17,7 @@ import java.util.function.Consumer;
 // Чтоб каждый раз не создавался новый инстанс ShipRS. Переиспользуем инстанс который создался при первом обращении
 public class ShipRS {
 
-    private ShipService shipService = new InMemoryShipServiceImpl();
+    private ShipService shipService = new BaseShipServiceImpl();
 
 
     @GET
