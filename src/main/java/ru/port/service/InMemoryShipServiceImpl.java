@@ -16,7 +16,7 @@ public class InMemoryShipServiceImpl implements ShipService {
         Faker faker = new Faker();
         for (int i = 1; i <= 100; i++) {
             ShipDto ship = new ShipDto();
-            ship.setName(faker.funnyName().name());
+            ship.setRange(faker.random().nextLong());
             ship.setModel(faker.color().name());
             ship.setShipsCode(i + "");
 

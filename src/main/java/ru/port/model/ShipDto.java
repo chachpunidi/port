@@ -1,17 +1,17 @@
 package ru.port.model;
 
-public class ShipDto {
+public class ShipDto implements AutoCloseable {
 
-    private String shipsCode;
+    private String shipCode;
     private String model;
-    private String name;
+    private Long range;
 
     public String getShipsCode() {
-        return shipsCode;
+        return shipCode;
     }
 
-    public void setShipsCode(String shipsCode) {
-        this.shipsCode = shipsCode;
+    public void setShipsCode(String shipCode) {
+        this.shipCode = shipCode;
     }
 
     public String getModel() {
@@ -22,11 +22,16 @@ public class ShipDto {
         this.model = model;
     }
 
-    public String getName() {
-        return name;
+    public Long getRange() {
+        return range;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRange(Long range) {
+        this. range = range;
+    }
+
+    @Override
+    public void close() throws Exception {
+
     }
 }

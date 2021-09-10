@@ -1,7 +1,8 @@
 package ru.port.repository;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.sql.*;
-import java.util.Properties;
 
 public class DBManager {
 
@@ -16,30 +17,29 @@ public class DBManager {
         return conn;
     }
 
-    public static Connection getConnection1() throws SQLException {
-        Properties props = new Properties();
-        props.setProperty("user", "aircraft_user");
-        props.setProperty("password", "aircraft_user");
-        Connection conn = DriverManager.getConnection(url, props);
-        return conn;
-    }
-
-    public static Connection getConnection2() throws SQLException {
-        String url = "jdbc:postgresql://localhost/test?user=aircraft_user&password=aircraft_user";
-        Connection conn = DriverManager.getConnection(url);
-        return conn;
-    }
-
     public static void main(String[] args) throws SQLException {
+        String code = args[1];
         Connection connection = DBManager.getConnection();
         Statement stmt = connection.createStatement();
-        Statement stmt1 = connection.prepareCall();
-        Statement stmt2 = connection.prepareStatement();
-        ResultSet rs = stmt.executeQuery("select * from aircrafts a");
+        String baseSql = "select * from aircrafts a";
+        if (StringUtils.isNoneEmpty(code)) {
+            baseSql = baseSql + " where a.code = " + code; // "select * from aircrafts a where a.code = 1";
+        }
+        ResultSet rs = stmt.executeQuery(baseSql);
         while (rs.next()) {
             System.out.println("by column index: " + rs.getString(1));
             System.out.println("by column name: " + rs.getString("aircraft_code"));
         }
         System.out.println(connection);
+    }
+
+    public static void closeConnection(Connection connection) {
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

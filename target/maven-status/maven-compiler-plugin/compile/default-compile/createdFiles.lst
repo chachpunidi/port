@@ -1,0 +1,10 @@
+ru/port/service/BaseShipServiceImpl.class
+ru/port/service/InMemoryShipServiceImpl.class
+ru/port/PortRS.class
+ru/port/service/BaseAirportServiceImpl.class
+ru/port/repository/DBManager.class
+ru/port/model/ShipDto.class
+ru/port/service/ShipService.class
+ru/port/service/AirportService.class
+ru/port/model/AirportDto.class
+ru/port/ShipRS.class

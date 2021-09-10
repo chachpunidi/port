@@ -1,5 +1,6 @@
 package ru.port.model;
 
+import java.time.ZoneId;
 import java.util.TimeZone;
 
 public class AirportDto {
@@ -9,7 +10,7 @@ public class AirportDto {
     private String city;
     private String longitude;
     private String latitude;
-    private TimeZone timeZone;
+    private String timeZone;
 
     public String getAirportCode() {
         return airportCode;
@@ -51,11 +52,11 @@ public class AirportDto {
         this.latitude = latitude;
     }
 
-    public TimeZone getTimeZone() {
+    public String getTimeZone() {
         return timeZone;
     }
 
-    public void setTimeZone(TimeZone timeZone) {
+    public void setTimeZone(String timeZone) {
         this.timeZone = timeZone;
     }
 }

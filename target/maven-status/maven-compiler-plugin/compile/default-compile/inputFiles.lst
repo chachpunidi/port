@@ -1,9 +1,10 @@
 /home/chachpunidi/projects/port/src/main/java/ru/port/service/ShipService.java
 /home/chachpunidi/projects/port/src/main/java/ru/port/repository/DBManager.java
 /home/chachpunidi/projects/port/src/main/java/ru/port/model/AirportDto.java
+/home/chachpunidi/projects/port/src/main/java/ru/port/service/AirportService.java
 /home/chachpunidi/projects/port/src/main/java/ru/port/model/ShipDto.java
 /home/chachpunidi/projects/port/src/main/java/ru/port/ShipRS.java
-/home/chachpunidi/projects/port/src/main/java/ru/port/repository/Connection.java
 /home/chachpunidi/projects/port/src/main/java/ru/port/service/InMemoryShipServiceImpl.java
 /home/chachpunidi/projects/port/src/main/java/ru/port/service/BaseShipServiceImpl.java
+/home/chachpunidi/projects/port/src/main/java/ru/port/service/BaseAirportServiceImpl.java
 /home/chachpunidi/projects/port/src/main/java/ru/port/PortRS.java
